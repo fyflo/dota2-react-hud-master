@@ -1,0 +1,23 @@
+﻿#cameras-container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    video {
+        height: 100%;
+        position: absolute;
+    }
+    /* VDO.Ninja iframe has no intrinsic aspect ratio; stretch it to fill the
+       container height while keeping 16:9 so the embedded video is not
+       letterboxed. The parent overflow:hidden crops any excess. */
+    iframe {
+        height: 100%;
+        width: auto;
+        aspect-ratio: 16 / 9;
+        position: absolute;
+        border: none;
+    }
+}
